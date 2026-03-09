@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head') %>
+    <title>Homepage | BlogiFy</title>
+</head>
+<body class="bg-gray-50">
+    <%- include('./partials/nav') %>
+
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <h1 class="text-3xl font-bold text-gray-900 mb-8">Latest Blogs</h1>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <% blogs.forEach(blog => { %>
+                <div class="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition duration-300">
+                    <img src="<%= blog.coverImageURL %>" class="w-full h-48 object-cover" alt="Blog Cover">
+                    <div class="p-5">
+                        <h5 class="text-lg font-semibold text-gray-900 mb-4 truncate"><%= blog.title %></h5>
+                        <a href="/blog/<%= blog._id %>" class="inline-block bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-700 transition">
+                            Read More
+                        </a>
+                    </div>
+                </div>
+            <% }) %>
+        </div>
+    </main>
+
+</body>
+</html>
