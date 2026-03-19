@@ -57,7 +57,7 @@ Make sure the following are installed on your system:
 - **MongoDB**
   - Local MongoDB installation  
   or  
-  - MongoDB Atlas connection string
+  - MongoDB compass connection string
 
 ---
 ## 3️ Setup Environment Variables
